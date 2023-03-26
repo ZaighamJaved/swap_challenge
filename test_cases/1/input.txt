@@ -1,0 +1,6 @@
+2
+TokenA, TokenB, 1.2
+TokenB, TokenC, 0.003
+2
+TokenA, TokenC, 10000
+TokenB, TokenA, 10000

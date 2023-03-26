@@ -1,0 +1,15 @@
+{
+	"name": "swap_coding_challenge",
+	"version": "1.0.0",
+	"description": "solution of swap coding challenge",
+	"main": "token_swap.js",
+	"scripts": {
+		"start": "node token_swap",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Zaigham Javed",
+	"license": "ISC",
+	"dependencies": {
+		"n-readlines": "^1.0.1"
+	}
+}

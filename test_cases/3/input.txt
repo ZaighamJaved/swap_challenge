@@ -1,0 +1,12 @@
+5
+TokenA, TokenB, 1.2
+TokenB, TokenC, 0.003
+TokenA, TokenD, 0.0000005
+TokenE, TokenF, 0.004
+TokenA, TokenF, 0.04
+5
+TokenA, TokenC, 10000
+TokenB, TokenA, 10000
+TokenD, TokenB, 10000
+TokenC, TokenD, 10000
+TokenE, TokenA, 10000
