@@ -46,12 +46,13 @@
  */
 
 
-const lineByLine = require('n-readlines')
+const lineByLine = require('n-readlines') // third pary library to read the input from file line by line
 const liner = new lineByLine('./input.txt')
 
+//TODO: this solution can be improved if we have multiple pairs with different price to get swap for two tokens
 function calculateTokenExchange() {
-	const pairsWithRate = {}
-	const numOfPairs = +liner.next().toString()
+	const pairsWithRate = {} // DS with all pair prices
+	const numOfPairs = +liner.next().toString() // total number pairs
 	for (let i = 0; i < numOfPairs; i++) {
 		const [tokenA, tokenB, rate] = liner.next().toString().split(', ').map(token => typeof token === 'string' ? token.trim() : parseFloat(token))
 		if (!pairsWithRate[tokenA]) pairsWithRate[tokenA] = {}
@@ -64,6 +65,7 @@ function calculateTokenExchange() {
 	const numOfQueries = +liner.next().toString()
 	for (let i = 0; i < numOfQueries; i++) {
 		const [tokenA, tokenB, amount] = liner.next().toString().split(", ").map((token) => typeof token === 'string' ? token.trim() : parseFloat(token))
+		// verification of token pair existance
 		if (!pairsWithRate[tokenA] || !pairsWithRate[tokenB]) {
 			results.push("undefined")
 			continue
